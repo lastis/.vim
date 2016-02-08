@@ -31,3 +31,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/vim-tex-fold"]
+	path = bundle/vim-tex-fold
+	url = https://github.com/matze/vim-tex-fold.git
