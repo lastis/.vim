@@ -12,11 +12,6 @@ let g:NERDTreeQuitOnOpen = 1
 nnoremap <F3> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
-" Rainbow parenthesis
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
 
 nnoremap <silent> <buffer> <cr> :CSearchContext<cr>
 
