@@ -34,3 +34,6 @@
 [submodule "bundle/vim-tex-fold"]
 	path = bundle/vim-tex-fold
 	url = https://github.com/matze/vim-tex-fold.git
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = git://github.com/honza/vim-snippets.git
