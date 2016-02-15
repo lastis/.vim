@@ -1,6 +1,11 @@
 filetype plugin indent on
 syntax on
 
+" " Set foldmethod to marker on certain file types.
+" autocmd FileType vim,tex setlocal foldmethod=marker
+set foldmethod=marker
+set nu
+
 " Pathogen
 execute pathogen#infect()
 call pathogen#helptags() " generate helptags for everything in 'runtimepath'
@@ -15,23 +20,13 @@ let g:tagbar_autoclose = 1
 
 nnoremap <silent> <buffer> <cr> :CSearchContext<cr>
 
-" Show note at char 80 and up
-"let &colorcolumn=join(range(81,999),",")
-"highlight ColorColumn ctermbg=235 guibg=#2c2d27
-""hi Normal guibg=#32322f ctermbg=236
-""hi NonText guibg=#32322f ctermbg=236
-""hi ColorColumn guibg=#2a2d27 ctermbg=0
-""let &colorcolumn="81,"
-
-" set tab configuration
-" set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
+let g:ycm_key_list_select_completion = []
+let g:ycm_key_list_previous_completion = []
 
 map <C-K> :pyf <path-to-this-file>/clang-format.py<cr>
 imap <C-K> <c-o>:pyf <path-to-this-file>/clang-format.py<cr>
@@ -61,18 +56,30 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 
-nnoremap <tab> :call Syntog()<cr>
-let g:syn_on = 0
-function! Syntog()
-    if g:syn_on
-        :SyntasticToggleMode
-        let g:syn_on = 0
-    else
-        :SyntasticToggleMode 
-        :SyntasticCheck
-        let g:syn_on = 1
-    endif
-endfunction
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsListSnippets = "<s-tab>"
+
+" " Toggle syntastic on and off with tab button.
+" nnoremap <tab> :call Syntog()<cr>
+" let g:syn_on = 0
+" function! Syntog()
+"     if g:syn_on
+"         :SyntasticToggleMode
+"         let g:syn_on = 0
+"     else
+"         :SyntasticToggleMode 
+"         :SyntasticCheck
+"         let g:syn_on = 1
+"     endif
+" endfunction
 
 " map za to space
 nnoremap <Space> za
