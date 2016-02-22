@@ -24,10 +24,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-let g:ycm_key_list_select_completion = []
-let g:ycm_key_list_previous_completion = []
-
 map <C-K> :pyf <path-to-this-file>/clang-format.py<cr>
 imap <C-K> <c-o>:pyf <path-to-this-file>/clang-format.py<cr>
 
@@ -56,7 +52,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 
-" make YCM compatible with UltiSnips (using supertab)
+" YCM settings
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+" make YCM compatible with UltiSnips
+" let g:ycm_key_list_select_completion = []
+" let g:ycm_key_list_previous_completion = []
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
