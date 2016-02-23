@@ -43,3 +43,6 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/ZoomWin"]
+	path = bundle/ZoomWin
+	url = https://github.com/vim-scripts/ZoomWin.git
