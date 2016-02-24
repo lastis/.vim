@@ -11,5 +11,5 @@ git submodule update --init --recursive
 
 YouCompleteMe must be compiled with:
 ```
-YouCompleteMe/install.py --clang-completer
+./bundle/YouCompleteMe/install.py --clang-completer
 ```
