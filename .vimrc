@@ -55,10 +55,10 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_
 " YCM settings
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 " make YCM compatible with UltiSnips
-let g:ycm_key_list_select_completion = []
-let g:ycm_key_list_previous_completion = []
-" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" let g:ycm_key_list_select_completion = []
+" let g:ycm_key_list_previous_completion = []
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 " let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
