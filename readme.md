@@ -1,6 +1,6 @@
 Dependencies:
 ```
-sudo apt-get install excuberant-ctags
+sudo apt-get install exuberant-ctags
 sudo pip install ropevim
 ```
 
