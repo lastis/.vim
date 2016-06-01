@@ -1,0 +1,1 @@
+/home/lastis/.vimrc
